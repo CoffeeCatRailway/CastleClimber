@@ -1,3 +1,4 @@
+class_name Player
 extends CharacterBody2D
 
 @onready var healthComponent: HealthComponent = $HealthComponent
@@ -36,6 +37,9 @@ func _physics_process(delta: float) -> void:
 	
 	# Call `move_and_slide` after state machine once velocity is set/updated
 	move_and_slide()
+
+func enterDoorState(exit: bool) -> void:
+	moveStateMachine.changeState($MoveStateMachine/StateDoor.setIsExiting(exit))
 
 func onHit(_isDead: bool, knockback: Vector2) -> void:
 	Utils.tweenFlash(self)

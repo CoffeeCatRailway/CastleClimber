@@ -1,7 +1,7 @@
-[gd_scene load_steps=45 format=3 uid="uid://cw5fcqvj8fgkk"]
+[gd_scene load_steps=64 format=3 uid="uid://cw5fcqvj8fgkk"]
 
-[ext_resource type="Script" path="res://scripts/characters/Player.gd" id="1_eg3jx"]
 [ext_resource type="Texture2D" uid="uid://d3m4h241lb31g" path="res://assets/textures/kings-and-pigs/Sprites/01-King Human/Idle (78x58).png" id="1_phwnq"]
+[ext_resource type="Script" path="res://scripts/characters/player/Player.gd" id="1_tubfw"]
 [ext_resource type="Script" path="res://scripts/characters/HealthComponent.gd" id="2_85v7a"]
 [ext_resource type="Texture2D" uid="uid://dbf6itedohj7n" path="res://assets/textures/kings-and-pigs/Sprites/01-King Human/Run (78x58).png" id="2_f71bk"]
 [ext_resource type="Texture2D" uid="uid://ckmgri5hkf24f" path="res://assets/textures/kings-and-pigs/Sprites/01-King Human/Attack (78x58).png" id="2_tb3j1"]
@@ -15,6 +15,9 @@
 [ext_resource type="Script" path="res://scripts/stateMachine/states/StateJump.gd" id="8_q3yeg"]
 [ext_resource type="Script" path="res://scripts/stateMachine/states/StateAttack.gd" id="9_uudon"]
 [ext_resource type="Texture2D" uid="uid://c8st0a4l46745" path="res://assets/textures/kings-and-pigs/Sprites/01-King Human/Dead (78x58).png" id="10_be18y"]
+[ext_resource type="Script" path="res://scripts/characters/player/StateDoor.gd" id="10_y53ca"]
+[ext_resource type="Texture2D" uid="uid://d02p5owhau7xa" path="res://assets/textures/kings-and-pigs/Sprites/01-King Human/Door In (78x58).png" id="13_equ8g"]
+[ext_resource type="Texture2D" uid="uid://d34yuies4feww" path="res://assets/textures/kings-and-pigs/Sprites/01-King Human/Door Out (78x58).png" id="14_a63u2"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_slcl1"]
 size = Vector2(19, 26)
@@ -90,6 +93,70 @@ region = Rect2(702, 0, 78, 58)
 [sub_resource type="AtlasTexture" id="AtlasTexture_5167r"]
 atlas = ExtResource("1_phwnq")
 region = Rect2(780, 0, 78, 58)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kqi3k"]
+atlas = ExtResource("13_equ8g")
+region = Rect2(0, 0, 78, 58)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n83xa"]
+atlas = ExtResource("13_equ8g")
+region = Rect2(78, 0, 78, 58)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3md8v"]
+atlas = ExtResource("13_equ8g")
+region = Rect2(156, 0, 78, 58)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t3jss"]
+atlas = ExtResource("13_equ8g")
+region = Rect2(234, 0, 78, 58)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qo3qy"]
+atlas = ExtResource("13_equ8g")
+region = Rect2(312, 0, 78, 58)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5duok"]
+atlas = ExtResource("13_equ8g")
+region = Rect2(390, 0, 78, 58)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_avye3"]
+atlas = ExtResource("13_equ8g")
+region = Rect2(468, 0, 78, 58)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qsltq"]
+atlas = ExtResource("13_equ8g")
+region = Rect2(546, 0, 78, 58)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8bvjb"]
+atlas = ExtResource("14_a63u2")
+region = Rect2(0, 0, 78, 58)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j3ye2"]
+atlas = ExtResource("14_a63u2")
+region = Rect2(78, 0, 78, 58)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_733ij"]
+atlas = ExtResource("14_a63u2")
+region = Rect2(156, 0, 78, 58)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d80hn"]
+atlas = ExtResource("14_a63u2")
+region = Rect2(234, 0, 78, 58)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7cvx1"]
+atlas = ExtResource("14_a63u2")
+region = Rect2(312, 0, 78, 58)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rceta"]
+atlas = ExtResource("14_a63u2")
+region = Rect2(390, 0, 78, 58)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nlbth"]
+atlas = ExtResource("14_a63u2")
+region = Rect2(468, 0, 78, 58)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2ts5k"]
+atlas = ExtResource("14_a63u2")
+region = Rect2(546, 0, 78, 58)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_qng6x"]
 atlas = ExtResource("2_f71bk")
@@ -196,6 +263,64 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": SubResource("AtlasTexture_kqi3k")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n83xa")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3md8v")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t3jss")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qo3qy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5duok")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_avye3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qsltq")
+}],
+"loop": false,
+"name": &"door_in",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8bvjb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j3ye2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_733ij")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d80hn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7cvx1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rceta")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nlbth")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2ts5k")
+}],
+"loop": false,
+"name": &"door_out",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": ExtResource("4_hp1bm")
 }],
 "loop": false,
@@ -246,7 +371,7 @@ size = Vector2(30, 40)
 [node name="Player" type="CharacterBody2D"]
 z_index = 3
 collision_layer = 2
-script = ExtResource("1_eg3jx")
+script = ExtResource("1_tubfw")
 
 [node name="HealthComponent" type="Node" parent="."]
 script = ExtResource("2_85v7a")
@@ -286,13 +411,16 @@ script = ExtResource("9_uudon")
 returnState = NodePath("../Idle")
 areaAttack = NodePath("../../AreaAttack")
 
+[node name="StateDoor" type="Node" parent="MoveStateMachine" node_paths=PackedStringArray("idleState")]
+script = ExtResource("10_y53ca")
+idleState = NodePath("../Idle")
+
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-7.5, 2)
 shape = SubResource("RectangleShape2D_slcl1")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_8vgvo")
-animation = &"attack"
 autoplay = "default"
 
 [node name="AreaAttack" type="Area2D" parent="."]

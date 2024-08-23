@@ -3,7 +3,7 @@ extends RigidBody2D
 @onready var healthComponent: HealthComponent = $HealthComponent
 
 @onready var pieces: Array[RigidBody2D] = [$Piece1, $Piece2, $Piece3, $Piece4]
-@export var knockbackMultiplier: Vector2 = Vector2(1., -1.)
+const KNOCKBACK_CORRECTION: Vector2 = Vector2(1., -1.)
 
 func _ready() -> void:
 	healthComponent.hit.connect(onHit)
@@ -25,4 +25,6 @@ func onHit(isDead: bool, knockback: Vector2) -> void:
 			piece.visible = true
 			piece.process_mode = Node.PROCESS_MODE_INHERIT
 			
-			piece.apply_impulse(knockback * knockbackMultiplier)
+			piece.apply_impulse(knockback * KNOCKBACK_CORRECTION * (randf() * .5 + .5))
+	else:
+		apply_impulse(knockback * KNOCKBACK_CORRECTION * (randf() * .5))

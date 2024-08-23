@@ -30,7 +30,7 @@ script = ExtResource("1_65ijx")
 
 [node name="HealthComponent" type="Node" parent="."]
 script = ExtResource("2_gb54l")
-maxHealth = 10
+maxHealth = 40
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_px5qb")
