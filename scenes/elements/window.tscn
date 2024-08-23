@@ -1,15 +1,13 @@
-[gd_scene load_steps=7 format=3 uid="uid://bag7ttt4cofpf"]
+[gd_scene load_steps=6 format=3 uid="uid://bag7ttt4cofpf"]
 
-[ext_resource type="Shader" path="res://assets/textures/kings-and-pigs/modified/window_clouds.gdshader" id="1_wpnyq"]
+[ext_resource type="Shader" path="res://assets/shaders/window_clouds.gdshader" id="1_wpnyq"]
 [ext_resource type="Texture2D" uid="uid://03qkjxoagcf2" path="res://assets/textures/kings-and-pigs/modified/window_clouds.png" id="2_gearp"]
 [ext_resource type="Texture2D" uid="uid://obj184n4k57m" path="res://assets/textures/kings-and-pigs/modified/window_mask.png" id="3_af37b"]
 [ext_resource type="Texture2D" uid="uid://dejsdggul1t6f" path="res://assets/textures/kings-and-pigs/modified/window.png" id="4_26o6p"]
-[ext_resource type="Script" path="res://scripts/elements/Window.gd" id="5_qpii3"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_d2oji"]
 shader = ExtResource("1_wpnyq")
 shader_parameter/cloudSpeed = 0.08
-shader_parameter/scrollStart = 0.0
 shader_parameter/maskTex = ExtResource("3_af37b")
 shader_parameter/cloudsTex = ExtResource("2_gearp")
 
@@ -17,4 +15,3 @@ shader_parameter/cloudsTex = ExtResource("2_gearp")
 material = SubResource("ShaderMaterial_d2oji")
 position = Vector2(16, 16)
 texture = ExtResource("4_26o6p")
-script = ExtResource("5_qpii3")
