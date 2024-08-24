@@ -34,8 +34,10 @@ nextLevel = "res://scenes/levels/level.tscn"
 [node name="Player" parent="." instance=ExtResource("5_d5g4p")]
 position = Vector2(198, 617)
 
-[node name="Camera2D" parent="Player" node_paths=PackedStringArray("tilemap") instance=ExtResource("6_tyfwy")]
-tilemap = NodePath("../../TileMap")
+[node name="Camera2D" parent="." node_paths=PackedStringArray("tilemap", "target") instance=ExtResource("6_tyfwy")]
+position = Vector2(198, 617)
+tilemap = NodePath("../TileMap")
+target = NodePath("../Player")
 
 [node name="Pigs" type="Node2D" parent="."]
 

@@ -18,5 +18,6 @@ auto = false
 
 [node name="Player" parent="." instance=ExtResource("3_fs3qw")]
 
-[node name="Camera2D" parent="Player" node_paths=PackedStringArray("tilemap") instance=ExtResource("4_kqfg2")]
-tilemap = NodePath("../../TileMap")
+[node name="Camera2D" parent="." node_paths=PackedStringArray("tilemap", "target") instance=ExtResource("4_kqfg2")]
+tilemap = NodePath("../TileMap")
+target = NodePath("../Player")

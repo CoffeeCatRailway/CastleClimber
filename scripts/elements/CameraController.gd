@@ -3,6 +3,10 @@ extends Camera2D
 @export var limits: ReferenceRect
 @export var tilemap: TileMap
 
+@export var target: Node2D
+var followTarget: bool = true
+@export_range(1., 100.) var scrollSpeed: float = 20.
+
 func _ready() -> void:
 	updateLimits()
 
@@ -22,3 +26,25 @@ func updateLimits() -> void:
 		limit_right = tilemapRect.end.x * tilemap.tile_set.tile_size.x
 		limit_bottom = tilemapRect.end.y * tilemap.tile_set.tile_size.y
 	#position_smoothing_enabled = true
+
+func _process(_delta: float) -> void:
+	if Input.is_action_just_pressed("camera_mode_toggle"):
+		followTarget = !followTarget
+		print("Toggled camera mode")
+	
+	if followTarget:
+		global_position = target.global_position
+
+func _input(event: InputEvent) -> void:
+	if followTarget:
+		return
+	
+	if event is InputEventMouseButton && event.pressed:
+		if event.button_index == MOUSE_BUTTON_WHEEL_UP:
+			global_position.y -= scrollSpeed
+		if event.button_index == MOUSE_BUTTON_WHEEL_DOWN:
+			global_position.y += scrollSpeed
+		
+		global_position.y = clampf(global_position.y, limit_top, limit_bottom)
+		
+		#print(global_position.y)

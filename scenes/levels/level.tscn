@@ -34,8 +34,10 @@ nextLevel = "res://scenes/levels/level_2.tscn"
 [node name="Player" parent="." instance=ExtResource("3_4usm1")]
 position = Vector2(71, 337)
 
-[node name="Camera2D" parent="Player" node_paths=PackedStringArray("limits") instance=ExtResource("6_6o8yo")]
-limits = NodePath("../../Limits")
+[node name="Camera2D" parent="." node_paths=PackedStringArray("limits", "target") instance=ExtResource("6_6o8yo")]
+position = Vector2(71, 337)
+limits = NodePath("../Limits")
+target = NodePath("../Player")
 
 [node name="Pigs" type="Node2D" parent="."]
 
