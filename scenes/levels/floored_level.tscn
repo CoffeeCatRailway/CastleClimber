@@ -1,0 +1,22 @@
+[gd_scene load_steps=6 format=3 uid="uid://oi7r2eaf842g"]
+
+[ext_resource type="Script" path="res://scripts/levels/FlooredLevel.gd" id="1_jdnil"]
+[ext_resource type="Script" path="res://scripts/levels/LevelDoorHandler.gd" id="2_805ln"]
+[ext_resource type="PackedScene" uid="uid://drbhnv7a44oal" path="res://scenes/elements/tile_map.tscn" id="2_g1dho"]
+[ext_resource type="PackedScene" uid="uid://cw5fcqvj8fgkk" path="res://scenes/characters/player.tscn" id="3_fs3qw"]
+[ext_resource type="PackedScene" uid="uid://c8o5h32wu71fk" path="res://scenes/elements/camera.tscn" id="4_kqfg2"]
+
+[node name="FlooredLevel" type="Node2D"]
+script = ExtResource("1_jdnil")
+
+[node name="LevelDoorHandler" type="Node" parent="." node_paths=PackedStringArray("player")]
+script = ExtResource("2_805ln")
+player = NodePath("../Player")
+auto = false
+
+[node name="TileMap" parent="." instance=ExtResource("2_g1dho")]
+
+[node name="Player" parent="." instance=ExtResource("3_fs3qw")]
+
+[node name="Camera2D" parent="Player" node_paths=PackedStringArray("tilemap") instance=ExtResource("4_kqfg2")]
+tilemap = NodePath("../../TileMap")

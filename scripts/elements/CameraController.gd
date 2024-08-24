@@ -4,6 +4,10 @@ extends Camera2D
 @export var tilemap: TileMap
 
 func _ready() -> void:
+	updateLimits()
+
+func updateLimits() -> void:
+	#position_smoothing_enabled = false
 	if limits:
 		limit_left = int(limits.position.x)
 		limit_top = int(limits.position.y)
@@ -17,3 +21,4 @@ func _ready() -> void:
 		limit_top = tilemapRect.position.y * tilemap.tile_set.tile_size.y
 		limit_right = tilemapRect.end.x * tilemap.tile_set.tile_size.x
 		limit_bottom = tilemapRect.end.y * tilemap.tile_set.tile_size.y
+	#position_smoothing_enabled = true

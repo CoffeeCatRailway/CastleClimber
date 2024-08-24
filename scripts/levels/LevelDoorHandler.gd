@@ -1,4 +1,5 @@
-extends Node2D
+class_name LevelDoorHandler
+extends Node
 
 @export var doorEntrance: Door
 @export var doorExit: Door
@@ -6,12 +7,19 @@ var canUseDoor: bool = false
 
 @export var player: Player
 
+@export var auto: bool = true
+
 func _ready() -> void:
+	if auto:
+		#init()
+		call_deferred("init")
+		call_deferred("enterLevel")
+
+func init() -> void:
 	doorExit.area.body_entered.connect(onDoorExitAreaEntered)
 	doorExit.area.body_exited.connect(onDoorExitAreaExited)
 	
 	player.visible = false
-	call_deferred("enterLevel")
 
 func enterLevel() -> void:
 	doorEntrance.play("open")
