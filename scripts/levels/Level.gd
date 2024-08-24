@@ -29,7 +29,10 @@ func exitLevel() -> void:
 	doorExit.play("close")
 	await doorExit.animation_finished
 	#player.visible = false
-	get_tree().change_scene_to_packed(doorExit.nextLevel)
+	if doorExit.nextLevel:
+		get_tree().change_scene_to_file(doorExit.nextLevel)
+	else:
+		get_tree().reload_current_scene()
 
 func onDoorExitAreaEntered(body: Node2D) -> void:
 	if body == player:

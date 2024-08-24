@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://c8o5h32wu71fk"]
+
+[ext_resource type="Script" path="res://scripts/elements/CameraController.gd" id="1_hbova"]
+
+[node name="Camera2D" type="Camera2D"]
+zoom = Vector2(3, 3)
+position_smoothing_enabled = true
+script = ExtResource("1_hbova")
