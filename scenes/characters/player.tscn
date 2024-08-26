@@ -394,7 +394,7 @@ healthComponent = NodePath("../../HealthComponent")
 [node name="Walk" type="Node" parent="MoveStateMachine" node_paths=PackedStringArray("idleState", "deathState", "jumpState", "attackState", "healthComponent")]
 script = ExtResource("5_wkj2p")
 idleState = NodePath("../Idle")
-deathState = NodePath(".")
+deathState = NodePath("../Death")
 jumpState = NodePath("../Jump")
 attackState = NodePath("../StateAttack")
 healthComponent = NodePath("../../HealthComponent")
