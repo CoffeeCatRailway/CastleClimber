@@ -11,8 +11,8 @@ config_version=5
 [application]
 
 config/name="CastleClimber"
-run/main_scene="res://scenes/levels/level.tscn"
-config/version="0.1.9"
+config/version="0.2.0"
+run/main_scene="res://scenes/levels/floored_level.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
 config/icon="res://icon.svg"
 
@@ -33,6 +33,7 @@ window/size/viewport_height=576
 window/size/window_width_override=1280
 window/size/window_height_override=640
 window/stretch/mode="viewport"
+window/stretch/aspect="keep_width"
 
 [dotnet]
 

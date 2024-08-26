@@ -8,6 +8,7 @@
 
 [node name="FlooredLevel" type="Node2D"]
 script = ExtResource("1_jdnil")
+floorCount = 6
 
 [node name="LevelDoorHandler" type="Node" parent="." node_paths=PackedStringArray("player")]
 script = ExtResource("2_805ln")

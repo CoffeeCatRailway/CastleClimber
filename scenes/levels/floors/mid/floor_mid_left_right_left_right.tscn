@@ -1,0 +1,80 @@
+[gd_scene load_steps=4 format=3 uid="uid://drrnd2qrqkfoj"]
+
+[ext_resource type="PackedScene" uid="uid://drbhnv7a44oal" path="res://scenes/elements/tile_map.tscn" id="1_ojrqb"]
+[ext_resource type="PackedScene" uid="uid://m2aeo33w4tg" path="res://scenes/characters/pig.tscn" id="2_e5n5s"]
+[ext_resource type="PackedScene" uid="uid://djy3wknmcrmuv" path="res://scenes/elements/box.tscn" id="3_fv2i2"]
+
+[node name="FloorMidLeftRightLeftRight" type="Node2D"]
+
+[node name="TileMap" parent="." instance=ExtResource("1_ojrqb")]
+layer_0/tile_data = PackedInt32Array(8, 196608, 5, 7, 131072, 5, 6, 131072, 5, 5, 131072, 5, 4, 131072, 5, 3, 65536, 5, 0, 196608, 1, 65536, 196608, 2, 131072, 196608, 2, 196608, 196608, 2, 262144, 196608, 2, 327680, 196608, 2, 393216, 196608, 2, 458752, 196608, 2, 524288, 196608, 3, 589823, 65536, 3, 524287, 65536, 2, 458751, 65536, 2, 393215, 65536, 2, 327679, 65536, 2, 262143, 65536, 2, 196607, 65536, 2, 131071, 65536, 2, 65535, 65536, 1, 11, 65536, 1, 65547, 65536, 2, 131083, 65536, 2, 196619, 65536, 2, 262155, 65536, 2, 327691, 65536, 2, 393227, 65536, 2, 458763, 65536, 2, 524299, 65536, 3, 524300, 196608, 3, 458764, 196608, 2, 393228, 196608, 2, 327692, 196608, 2, 262156, 196608, 2, 196620, 196608, 2, 131084, 196608, 2, 65548, 196608, 2, 12, 196608, 1, 1, 65536, 7, 2, 196608, 7, 65538, 458752, 8, 65537, 65536, 8, 131073, 65536, 8, 196609, 65536, 8, 262145, 65536, 8, 327681, 65536, 8, 393217, 65536, 8, 458753, 65536, 8, 458754, 458752, 7, 458755, 131072, 9, 458756, 131072, 9, 458757, 131072, 9, 458758, 131072, 9, 458759, 131072, 9, 458760, 131072, 9, 458761, 524288, 7, 458762, 196608, 8, 393226, 196608, 8, 327690, 196608, 8, 262154, 196608, 8, 196618, 196608, 8, 131082, 196608, 8, 65546, 196608, 8, 10, 196608, 7, 9, 65536, 7, 65545, 524288, 8, 131081, 131072, 8, 262153, 131072, 8, 327689, 131072, 8, 393225, 131072, 8, 393224, 131072, 8, 393223, 131072, 8, 393222, 131072, 8, 393221, 131072, 8, 393220, 131072, 8, 393219, 131072, 8, 393218, 131072, 8, 327682, 131072, 8, 262146, 131072, 8, 196610, 131072, 8, 196611, 131072, 8, 131075, 131072, 8, 65539, 131072, 7, 131074, 131072, 8, 131076, 131072, 8, 131077, 131072, 8, 65541, 131072, 7, 65542, 131072, 7, 65543, 131072, 7, 65544, 131072, 7, 196617, 131072, 8, 196616, 131072, 8, 131080, 131072, 8, 131079, 131072, 8, 131078, 131072, 8, 65540, 131072, 7, 262147, 131072, 8, 327683, 131072, 8, 327684, 131072, 8, 327685, 131072, 8, 327686, 131072, 8, 262150, 131072, 8, 262151, 131072, 8, 196615, 131072, 8, 196614, 131072, 8, 196613, 131072, 8, 196612, 131072, 8, 262148, 131072, 8, 327687, 131072, 8, 262149, 131072, 8, 262152, 131072, 8, 327688, 131072, 8, 524298, 196608, 9, 524297, 65536, 9, 524290, 196608, 9, 524289, 65536, 9, 524291, 65536, 5, 524292, 131072, 5, 524293, 131072, 5, 524294, 131072, 5, 524295, 131072, 5, 524296, 196608, 5)
+layer_1/tile_data = PackedInt32Array(1, 327681, 1, 10, 327681, 1, 524290, 327681, 1, 524297, 327681, 1, 393220, 131073, 2, 393221, 196609, 2, 393222, 196609, 2, 393223, 262145, 2, 65538, 327681, 1, 65545, 327681, 1, 131073, 327681, 1, 131082, 327681, 1, 458753, 327681, 1, 458762, 327681, 1, 327685, 131073, 1, 327686, 262145, 1, 327682, 327681, 1, 393219, 327681, 1, 393224, 327681, 1, 262146, 327681, 1, 196612, 131073, 2, 196613, 196609, 2, 196614, 196609, 2, 196615, 262145, 2, 196611, 327681, 1, 196616, 327681, 1, 262153, 327681, 1, 327689, 327681, 1, 65539, 2, 65536, 65543, 2, 65536)
+
+[node name="Pig" parent="." instance=ExtResource("2_e5n5s")]
+position = Vector2(192, 82)
+
+[node name="Pig2" parent="." instance=ExtResource("2_e5n5s")]
+position = Vector2(192, 178)
+
+[node name="Box" parent="." instance=ExtResource("3_fv2i2")]
+position = Vector2(112, 248)
+
+[node name="Box2" parent="." instance=ExtResource("3_fv2i2")]
+position = Vector2(169, 248)
+
+[node name="Box3" parent="." instance=ExtResource("3_fv2i2")]
+position = Vector2(264, 248)
+
+[node name="Box4" parent="." instance=ExtResource("3_fv2i2")]
+position = Vector2(191, 248)
+
+[node name="Box5" parent="." instance=ExtResource("3_fv2i2")]
+position = Vector2(185, 232)
+
+[node name="Box6" parent="." instance=ExtResource("3_fv2i2")]
+position = Vector2(220, 248)
+
+[node name="Box7" parent="." instance=ExtResource("3_fv2i2")]
+position = Vector2(209, 232)
+
+[node name="Box8" parent="." instance=ExtResource("3_fv2i2")]
+position = Vector2(201, 216)
+
+[node name="Box9" parent="." instance=ExtResource("3_fv2i2")]
+position = Vector2(109, 232)
+
+[node name="Box10" parent="." instance=ExtResource("3_fv2i2")]
+position = Vector2(57, 215)
+
+[node name="Box11" parent="." instance=ExtResource("3_fv2i2")]
+position = Vector2(129, 184)
+
+[node name="Box12" parent="." instance=ExtResource("3_fv2i2")]
+position = Vector2(258, 184)
+
+[node name="Box13" parent="." instance=ExtResource("3_fv2i2")]
+position = Vector2(255, 168)
+
+[node name="Box14" parent="." instance=ExtResource("3_fv2i2")]
+position = Vector2(302, 119)
+
+[node name="Box15" parent="." instance=ExtResource("3_fv2i2")]
+position = Vector2(180, 151)
+
+[node name="Box16" parent="." instance=ExtResource("3_fv2i2")]
+position = Vector2(186, 135)
+
+[node name="Box17" parent="." instance=ExtResource("3_fv2i2")]
+position = Vector2(143, 88)
+
+[node name="Box18" parent="." instance=ExtResource("3_fv2i2")]
+position = Vector2(145, 72)
+
+[node name="Box19" parent="." instance=ExtResource("3_fv2i2")]
+position = Vector2(256, 88)
+
+[node name="Box20" parent="." instance=ExtResource("3_fv2i2")]
+position = Vector2(44, 55)
+
+[node name="Box21" parent="." instance=ExtResource("3_fv2i2")]
+position = Vector2(313, 23)
