@@ -249,6 +249,7 @@ script = ExtResource("1_xv6gl")
 
 [node name="HealthComponent" type="Node" parent="."]
 script = ExtResource("1_ccexi")
+maxHealth = 60
 
 [node name="PigMoveComponent" type="Node" parent="." node_paths=PackedStringArray("areaAttack", "rayGround", "rayForward", "timerWait")]
 script = ExtResource("2_3plcd")
